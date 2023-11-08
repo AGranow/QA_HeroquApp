@@ -11,7 +11,7 @@ public class NewTabTest extends TestBase{
     @BeforeMethod
     public void Precondition(){
         // click on Multiple Windows link
-        new HomePage(driver).detMultipleWindows();
+        new HomePage(driver).getMultipleWindows();
     }
 
     @Test

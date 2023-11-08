@@ -27,7 +27,7 @@ public class AlertsPage extends HomePage {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             wait.until(ExpectedConditions.alertIsPresent()).accept();
-        } catch (NoAlertPresentException e) {
+        } catch (NoAlertPresentException ignored) {
 
         }
         return this;
@@ -65,12 +65,10 @@ public class AlertsPage extends HomePage {
 
     public AlertsPage clickOnPromptButton() {
         click(promtButton);
-
-
         return this;
     }
 
-    public AlertsPage enterMessageToAllert(String message) {
+    public AlertsPage enterMessageToAlert(String message) {
         if (message != null) {
             driver.switchTo().alert().sendKeys(message);
         }

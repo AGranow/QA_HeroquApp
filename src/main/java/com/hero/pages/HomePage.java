@@ -22,18 +22,18 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[.='Multiple Windows']")
     WebElement windowsLink;
 
-    public WindowPage detMultipleWindows() {
+    public WindowPage getMultipleWindows() {
         click(windowsLink);
         return new WindowPage(driver);
     }
 
 
     @FindBy(xpath = "//a[.='Form Authentication']")
-    WebElement formLink;
+    WebElement formAuthentication;
 
 
     public JSExecutor getFormAuthenticaution() {
-        click(formLink);
+        click(formAuthentication);
         return new JSExecutor(driver);
 
 

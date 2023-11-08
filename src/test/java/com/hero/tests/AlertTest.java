@@ -17,7 +17,7 @@ public class AlertTest extends TestBase {
     public void acceptAlert() {
         //click on the button Click for JS Alert
         //click on OK
-        //assert text resalt 'You successfully clicked an alert'
+        //assert text result 'You successfully clicked an alert'
 
         new AlertsPage(driver)
                 .clickOnAlertButton()
@@ -37,17 +37,15 @@ public class AlertTest extends TestBase {
     }
 
     @Test
-    public void sendMessageToAllert() {
+    public void sendMessageToAlertTest() {
         //click on the button Click for JS Prompt
         //enter 'Hello World!!!'
         //click on OK
         //assert text result 'Hello World!!!'
 
         new AlertsPage(driver).clickOnPromptButton()
-                .enterMessageToAllert("Hello World!!!")
+                .enterMessageToAlert("Hello World!!!")
                 .acceptAlert()
                 .verifyResult("Hello World!!!");
     }
-
-
 }
